@@ -25,10 +25,10 @@ app.get('/', (req, res) => {
     res.send("Please provide correcct resource url to access the onboarding service e.g /customers");
 });
 
-mongoose.connect(process.env.DB_MB_CONN || process.env.DB_CONNECTION,
-    { useNewUrlParser: true ,useUnifiedTopology: true  },() =>{
-    console.log("DB Connected - Local")    
-})
+//mongoose.connect(process.env.DB_MB_CONN || process.env.DB_CONNECTION,
+  //  { useNewUrlParser: true ,useUnifiedTopology: true  },() =>{
+    //console.log("DB Connected - Local")    
+//})
 
 const port=process.env.PORT || 3000
 
