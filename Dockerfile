@@ -1,7 +1,7 @@
-FROM node:10
-WORKDIR /onboarding_backend/src
-COPY package.json /onboarding_backend
+FROM node:current-slim
+WORKDIR /usr/src/app
+COPY package*.json ./
 RUN npm install
-COPY . /onboarding_backend
-CMD node app.js
+COPY . .
 EXPOSE 3000
+CMD ["npm","start"]
