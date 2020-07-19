@@ -13,10 +13,10 @@ spec:
                 app: back-end
         spec:
             containers:
-                - name: back-end
+              - name: back-end
                 image: garimanath/node_test:latest
                 ports:
-                    - containerPort: 80
+                  - containerPort: 80
 
 
 #service file
@@ -28,7 +28,7 @@ spec:
     selector:
         app: back-end
     ports:
-    - protocol: TCP
+      - protocol: TCP
         port: 80
         targetPort: 80
     type: LoadBalancer
